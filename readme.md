@@ -1,4 +1,4 @@
-#Mention Pair Annotations (MPA) model
+# Mention Pair Annotations (MPA) model
 
 This is a Variational Inference implementation of the Mention Pair Annotations (MPA) model.
 The code is written in JAVA and requires the Apache Commons Math external library.
