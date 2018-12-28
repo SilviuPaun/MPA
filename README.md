@@ -1,5 +1,5 @@
 This is a Variational Inference implementation of the Mention Pair Annotations (MPA) model.
-The software requires JAVA and the Apache Commons Math external library.
+The code is written in JAVA and requires the Apache Commons Math external library.
 
 The code is accompanied by an example input file (example.csv) which assumes the following structure:
 mention_id,annotator_id,gold,annotation
