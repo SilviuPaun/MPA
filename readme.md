@@ -5,12 +5,14 @@ The code is written in JAVA and requires the Apache Commons Math external librar
 
 The code is accompanied by an example input file (example.csv) which assumes the following structure:
 
-`mention_id,annotator_id,gold,annotation
+```
+mention_id,annotator_id,gold,annotation
 ne9399,annotator1,DO(ne9398),DO(ne9398)
 ne9399,annotator2,DO(ne9398),DO(ne9395)
 ne9399,annotator3,DO(ne9398),DO(ne9398)
 ne9399,annotator4,DO(ne9398),DO(ne9396)
-...`
+...
+```
 
 The header describes the id of the mention, the id of the annotator, the gold (expert) label and the annotation label provided by the annotator. The code will automatically extract the class from the annotation label (e.g.: DO).
 
