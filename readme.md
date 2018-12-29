@@ -1,9 +1,12 @@
 # Mention Pair Annotations (MPA) model
 
-This is a Variational Inference implementation of the Mention Pair Annotations (MPA) model.
-The code is written in JAVA and requires the Apache Commons Math external library.
+This is a variational inference implementation of the Mention Pair Annotations (MPA) model presented in
 
-The code is accompanied by an example input file (example.csv) which assumes the following structure:
+**A Probabilistic Annotation Model for Crowdsourcing Coreference**
+Silviu Paun, Jon Chamberlain, Udo Kruschwitz, Juntao Yu, Massimo Poesio 
+In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP) , 2018 
+
+The code is written in JAVA and requires the Apache Commons Mathematics library. The input file (e.g., example.csv) assumes the following structure:
 
 ```
 mention_id,annotator_id,gold,annotation
