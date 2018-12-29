@@ -2,7 +2,7 @@
 
 This is a variational inference implementation of the Mention Pair Annotations (MPA) model presented in
 
-Silviu Paun, Jon Chamberlain, Udo Kruschwitz, Juntao Yu, Massimo Poesio. **A Probabilistic Annotation Model for Crowdsourcing Coreference**. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP) , 2018 
+Silviu Paun, Jon Chamberlain, Udo Kruschwitz, Juntao Yu, Massimo Poesio (2018). **A Probabilistic Annotation Model for Crowdsourcing Coreference**. In *Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)*. 
 
 The code is written in JAVA and requires the Apache Commons Mathematics library. The input file (e.g., example.csv) assumes the following structure:
 
