@@ -1,6 +1,6 @@
 # Mention Pair Annotations (MPA) model
 
-This is a variational inference implementation of the Mention Pair Annotations (MPA) model presented in
+This is a variational inference implementation of the *Mention Pair Annotations* (MPA) model presented in
 
 Silviu Paun, Jon Chamberlain, Udo Kruschwitz, Juntao Yu, Massimo Poesio (2018). **A Probabilistic Annotation Model for Crowdsourcing Coreference**. In *Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)*. 
 
