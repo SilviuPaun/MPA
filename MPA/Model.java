@@ -525,6 +525,13 @@ public class Model {
 		itemAnnotations = new HashMap<Integer, List<Integer>>();
 		annotatorOfItemAnnotation = new HashMap<Pair, Integer>();
 		itemGoldStandard = new HashMap<String, String>();
+
+		//these additional collections will significantly speed up loading the data
+		Set<String> annotatorsSet = new HashSet<String>();
+		Map<String, Integer> annotatorsIndexMap = new HashMap<String, Integer>();
+		Set<String> itemsSet = new HashSet<String>();
+		Map<String, Integer> itemsIndexMap = new HashMap<String, Integer>();
+
 		int lineCounter = 0;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
@@ -543,19 +550,28 @@ public class Model {
 				String gold = data[2];
 				String responseClass = data[3];
 				
-				if(!annotators.contains(annotator))
+				boolean added_coder = annotatorsSet.add(annotator);
+				if(added_coder)
+				{
 					annotators.add(annotator);
-					
-				if(!items.contains(item))
+					annotatorsIndexMap.put(annotator, annotators.size() - 1);
+				}
+				int annotatorIndex = annotatorsIndexMap.get(annotator);
+				
+				
+				boolean added_item = itemsSet.add(item);
+				if(added_item)
+				{
 					items.add(item);
+					itemsIndexMap.put(item, items.size() - 1);
+				}
+				int itemIndex = itemsIndexMap.get(item);
 					
 				List<String> iClasses = itemClasses.containsKey(item) ? itemClasses.get(item) : new ArrayList<String>();
 				if(!iClasses.contains(responseClass))
 					iClasses.add(responseClass);
 				itemClasses.put(item, iClasses);
 				
-				int annotatorIndex = annotators.indexOf(annotator);
-				int itemIndex = items.indexOf(item);
 				int responseIndex = iClasses.indexOf(responseClass);
 				
 				List<Integer> itemAnt = itemAnnotations.containsKey(itemIndex) ? itemAnnotations.get(itemIndex) : new ArrayList<Integer>();
